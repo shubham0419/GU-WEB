@@ -1,0 +1,11 @@
+div{
+  background-color: brown;
+  display: inline-block;
+  height: 100px;
+}
+
+span{
+  background-color: blueviolet;
+  display: block;
+  height: 100px;
+}

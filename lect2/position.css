@@ -66,3 +66,14 @@
   top: 20px;
   right: 0px;
 }
+
+
+#sticky-container{
+  border: 2px solid black;
+}
+
+#sticky-container > p:nth-child(2){
+  background-color: lightcoral;
+  position: sticky;
+  top: 10px;
+}

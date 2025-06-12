@@ -35,3 +35,43 @@ input:focus{
   /* transition-delay: 1s; */
   transition-timing-function: cubic-bezier(.34,.08,.55,.95);
 }
+
+#box2{
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  animation-name: move;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(.34,.08,.55,.95);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* postion after animation stops */
+  animation-fill-mode: forwards;
+}
+
+/* @keyframes move{
+  from{
+    transform: translateX(0px);
+  }
+  to{
+    transform: translateX(500px);
+  }
+} */
+
+@keyframes move{
+  0%{
+    transform: translateX(0px);
+  }
+  25%{
+    transform: translateX(500px);
+  }
+  50%{
+    transform: translateY(500px) translateX(500px) rotate(360deg);
+  }
+  75%{
+    transform: translateX(0px) translateY(500px);
+  }
+  100%{
+    transform: translateY(0px) rotate(0deg);
+  }
+}

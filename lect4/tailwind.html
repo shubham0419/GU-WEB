@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- flex -->
+    <!-- <div class="border-2 border-red-500 w-[80vw] h-[80vh]
+      flex flex-col justify-center items-center">
+      <div class="border w-12 h-12">flex</div>
+      <div class="border w-12 h-12">flex</div>
+      <div class="border w-12 h-12">flex</div>
+      <div class="border w-12 h-12">flex</div>
+      <div class="border w-12 h-12">flex</div>
+      <div class="border w-12 h-12">flex</div>
+    </div> -->
+
+    <!-- grid -->
+    <div class="border-2 border-red-500 w-[80vw] h-[80vh]
+      grid grid-cols-4 grid-rows-3 gap-2">
+      <img class="w-full" src="https://m.economictimes.com/thumb/msid-106775052,width-1600,height-900,resizemode-4,imgsize-69266/mclaren-750s-launched-in-india-at-rs-5-91-crore-what-makes-it-so-expensive.jpg" alt="">
+      <div class="border col-span-2 row-span-2">2</div>
+      <div class="border ">3</div>
+      <div class="border ">4</div>
+      <div class="border ">5</div>
+    </div>
+
+    <h1 class="text-[#fb5607] text-3xl font-bold overline">hello</h1>
+    <h1 class="text-red-500 text-3xl font-bold overline leading-20">
+      Hello world!
+    </h1>
+    <p class="border-2 border-blue-200 border-dashed rounded-full bg-gray-100 ">
+      border
+    </p>
+
+    <p class="bg-[linear-gradient(10deg,#1d3557,#457b9d,#d62828)]">
+      custom gradient
+    </p>
+
+    <!-- overflow -->
+    <p class="bg-green-200 text-[30px] w-20 capitalize my-5 overflow-x-scroll">
+      this text is overflowing
+    </p>
+
+    <p class="bg-gradient-to-r w-[60vw] from-green-100 to-green-700 shadow-md shadow-red-800">
+      Gradient
+    </p>
+
+    <p class="bg-yellow-200 p-4 pt-10 w-12 border mx-auto ">
+      Padding & Margin
+    </p>
+
+    <!-- media Query -->
+     <p class="bg-blue-300 sm:bg-red-300 md:bg-green-300 text-shadow-lg text-shadow-red-300 animate-spin colorRed">
+      Lorem ipsum dolor sit amet consectetur adipisicing.
+     </p>
+
+    <p class="bg-red-200 hover:bg-red-500 hover:border hover:shadow-md 
+      shadow-red-300 hover:text-white">
+      hover
+    </p>
+
+    <p class="bg-red-200 active:bg-red-500 active:border active:shadow-md 
+      shadow-red-300 active:text-white">
+      active
+    </p>
+
+    
+
+  </body>
+</html>

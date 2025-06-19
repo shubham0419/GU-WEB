@@ -53,17 +53,17 @@
 // console.log(higher(cb));
 // // ------------------------------------
 
-function greet(callback) {
-  console.log("Step 1");
-  callback("John");
-  console.log("Step 3");
-}
+// function greet(callback) {
+//   console.log("Step 1");
+//   callback("John");
+//   console.log("Step 3");
+// }
 
-function sayHello(name) {
-  console.log("Step 2: Hello", name);
-}
+// function sayHello(name) {
+//   console.log("Step 2: Hello", name);
+// }
 
-greet(sayHello);
+// greet(sayHello);
 // // -------------------
 // function outer(callback) {
 //   console.log("1. outer");
@@ -128,3 +128,12 @@ greet(sayHello);
 //     return a * b;
 //   })
 // );
+
+// Q. take an input(number) from user and console whether the number is
+// 0,less than 0, or greater than 0 or a word
+let num = prompt("enter a number");
+console.log(num,typeof(num));
+
+let ans = num==0?"its a zero":num<0?"less than 0":num>0?"greater than 0":"its a word"
+console.log(ans);
+

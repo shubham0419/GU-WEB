@@ -1,5 +1,4 @@
 // String
-
 let str = "this is a string";
 let newStr = str.replace("is","in");
 console.log(newStr);

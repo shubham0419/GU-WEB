@@ -4,8 +4,15 @@ let menu = [
   "chicken rice","matar paneer","dal-makhni",
 ]
 
-// filter out veg and non-veg items.
+let non_veg_manu = menu.filter((item)=>{
+  return item.includes("egg") || item.includes("chickem")
+})
 
+let veg =  menu.filter((item)=>{
+  return !(item.includes("egg") || item.includes("chickem"))
+})
+
+// filter out veg and non-veg items.
 let products = [
   {
     name: "product 1 name",
@@ -44,3 +51,75 @@ let products = [
   }
 ];
 
+// Q. filter out all the products which are white & wearable
+const filterProduct = products.filter((item)=>{
+  return (item.category === "wearable" && item.color.includes("white"))
+})
+
+console.log(filterProduct);
+
+// Q. 
+// new Promise((resolve) => {
+//   resolve(5);
+// })
+//   .then((num) => {
+//     console.log("First then:", num);
+//     return num * 2;
+//   })
+//   .then((num) => {
+//     console.log("Second then:", num);
+//     return num - 3;
+//   })
+//   .then((num) => {
+//     console.log("Final then:", num);
+//   });
+
+  // ------------
+
+// console.log("A");
+
+// Promise.resolve().then(() => {
+//   console.log("B");
+// });
+
+// console.log("C");
+
+// setTimeout(() => {
+//   console.log("D");
+// }, 0);
+
+// console.log("E");
+// // -------
+// function checkNumber(num) {
+//   return new Promise((resolve, reject) => {
+//     if (num > 10) {
+//       resolve("Number is big");
+//     } else {
+//       reject("Too small");
+//     }
+//   });
+// }
+
+// checkNumber(5)
+//   .then((msg) => {
+//     console.log("Resolved:", msg);
+//   })
+//   .catch((err) => {
+//     console.log("Rejected:", err);
+//   });
+// // -----------
+// console.log("X");
+
+// new Promise((resolve) => {
+//   console.log("Y");
+//   resolve();
+// })
+//   .then(() => {
+//     console.log("Z");
+//     return Promise.resolve("W");
+//   })
+//   .then((val) => {
+//     console.log(val);
+//   });
+
+// console.log("End");

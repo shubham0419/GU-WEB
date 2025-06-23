@@ -1,7 +1,7 @@
 const h1 = document.querySelector("h1");
 
 h1.addEventListener("click",(e)=>{
-  // console.log(e.target); // return element at which the event occur
+  console.log(e.target); // return element at which the event occur
   h1.classList.toggle("background");
   console.log("h1 clicked");
 })

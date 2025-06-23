@@ -12,6 +12,8 @@ form.addEventListener("submit",async (e)=>{
 const container = document.getElementById("container")
 function createCard(movies){
 
+  container.innerHTML="";
+  
   movies.forEach(movie => {
     const div = document.createElement("div");
     div.className="card";

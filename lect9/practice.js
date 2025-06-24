@@ -1,17 +1,16 @@
-
 const form = document.getElementById("search-form");
 
 form.addEventListener("submit",async (e)=>{
   e.preventDefault(); //stops page reload
   let search = e.target.children[0].value;
   let res = await axios.get(`https://www.omdbapi.com/?s=${search}&apikey=2e334a85`);
-  console.log(res.data.Search);
-  createCard(res.data.Search)
+  localStorage.setItem("movies",JSON.stringify(res.data.Search))
+  createCard()
 })
 
 const container = document.getElementById("container")
-function createCard(movies){
-
+function createCard(){
+  let movies = JSON.parse(localStorage.getItem("movies"))
   container.innerHTML="";
   
   movies.forEach(movie => {
@@ -25,3 +24,8 @@ function createCard(movies){
     container.append(div);
   });
 }
+if(localStorage.getItem("movies")){
+  createCard();
+}
+
+localStorage.removeItem("name");

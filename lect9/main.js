@@ -17,6 +17,12 @@ console.log(elementByQuery,eleByQuery,elementByQue);
 const elementsByQuery = document.querySelectorAll(".para2")
 console.log(elementsByQuery);
 
+// let a = 20;
+// {
+//   let a = 50;
+// }
+
+// console.log(a);
 
 const container = document.getElementById("container");
 console.log(container.innerText);

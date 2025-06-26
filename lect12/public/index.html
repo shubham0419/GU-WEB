@@ -6,11 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body class="bg-gray-100">
     <div class="w-[90vw] shadow-lg p-5 m-auto mt-32 border rounded-md flex flex-col gap-3 bg-white">
         <h1 class="text-3xl font-semibold text-center">TaskMaster</h1>
-        <form class="flex w-full justify-center">
+        <form id="todo-form" class="flex w-full justify-center">
             <input class="w-10/12 border px-2 rounded-md py-1" type="text" required placeholder="Add Task ...">
             <button class="border bg-green-500 text-white py-1 px-3 rounded-md">Add Task</button>
         </form>

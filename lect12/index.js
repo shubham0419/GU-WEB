@@ -20,6 +20,10 @@ app.post("/add-todo",(req,res)=>{
     res.status(201).json({Todos});
 })
 
+app.get("/all-todos",(req,res)=>{
+    res.status(200).json({Todos})
+})
+
 app.listen(PORT, () => {
     console.log(`http://localhost:` + PORT);
 });

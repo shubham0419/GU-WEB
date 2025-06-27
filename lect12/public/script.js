@@ -56,6 +56,14 @@ async function getAllTodos(){
 
 getAllTodos();
 
+async function filterTodos(filter){
+    let res = await axios.get("http://localhost:4444/todo/filter",{
+        params:{
+            filter:filter
+        }
+    });
+    renderTodos(res.data.Todos)
+}
 btnContainer.addEventListener("click",(e)=>{
     if(e.target.id=="active" || e.target.id=="all" || e.target.id=="completed"){
         for(let btn of btnContainer.children){
@@ -64,6 +72,13 @@ btnContainer.addEventListener("click",(e)=>{
         };
         e.target.classList.add("bg-green-500");
         e.target.classList.add("text-white");
+    }
+    if(e.target.id=="active"){
+        filterTodos("active")
+    }else if(e.target.id=="completed"){
+        filterTodos("completed")
+    }else if(e.target.id=="all"){
+        filterTodos("all")
     }
     
 })

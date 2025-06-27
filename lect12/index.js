@@ -15,6 +15,7 @@ let Todos = [
     //     completed:false
     // }
 ];
+
 app.post("/add-todo",(req,res)=>{
     const task = req.body.task;
     Todos.push({task:task,completed:false,id:uuidv4()});
@@ -48,6 +49,24 @@ app.delete("/clear-complete",(req,res)=>{
         return todo.completed==false;
     })
     res.status(200).json({Todos});
+})
+
+app.get("/todo/filter",(req,res)=>{
+    const filter = req.query.filter;
+    console.log(req.query);
+    if(filter=="active"){
+        const filteredTodos = Todos.filter((todo)=>{
+            return todo.completed == false;
+        })
+        return res.status(200).json({Todos:filteredTodos})
+    }
+    if(filter=="completed"){
+        const filteredTodos = Todos.filter((todo)=>{
+            return todo.completed == true;
+        })
+        return res.status(200).json({Todos:filteredTodos})
+    }
+    res.status(200).json({Todos})
 })
 
 app.get("/all-todos",(req,res)=>{

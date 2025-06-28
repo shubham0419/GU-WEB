@@ -3,10 +3,11 @@ const User = require("../models/user.model");
 
 module.exports.createUser = async (req,res)=>{
   try {
+    let {name,email,password} = req.body;
     let user = await User.create({
-      name:"shubham",
-      email:"shubham7@gmail.com",
-      password:"123456"
+      name:name,
+      email:email,
+      password:password
     })
     res.status(201).json({user});
   } catch (error) {
